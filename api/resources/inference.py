@@ -29,8 +29,11 @@ class Predict(Resource):
         # MODEL_NAME = json_data.get('model_name', 'mobilenet-fullstack')
         # NAMESPACE = json_data.get('namespace', 'ifsvc')
 
-        CLUSTER_IP = '104.198.233.27'
-        HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.{CLUSTER_IP}.xip.io'
+        # CLUSTER_IP = '104.198.233.27'
+        # HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.{CLUSTER_IP}.xip.io'
+        CLUSTER_IP = 'cluster-local-gateway.istio-system'
+        HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.svc.cluster.local'
+
         res = request(
             instances=INSTANCES,
             cluster_ip=CLUSTER_IP,
@@ -60,8 +63,10 @@ class Explain(Resource):
         # MODEL_NAME = json_data.get('model_name', 'mobilenet-fullstack')
         # NAMESPACE = json_data.get('namespace', 'ifsvc')
 
-        CLUSTER_IP = '104.198.233.27'
-        HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.{CLUSTER_IP}.xip.io'
+        # CLUSTER_IP = '104.198.233.27'
+        # HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.{CLUSTER_IP}.xip.io'
+        CLUSTER_IP = 'cluster-local-gateway.istio-system'
+        HOSTNAME = f'{MODEL_NAME}.{NAMESPACE}.svc.cluster.local'
 
         res = request(
             instances=INSTANCES,

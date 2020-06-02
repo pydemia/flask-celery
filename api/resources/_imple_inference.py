@@ -15,7 +15,6 @@ def request(instances=None, cluster_ip=None, hostname=None, model_name=None, op=
 
     try:
         payload = {'instances': instances}
-        
 
         # sending post request to TensorFlow Serving server
         headers = {'Host': hostname}
