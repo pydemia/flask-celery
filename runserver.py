@@ -13,4 +13,4 @@ celery_app = factory.celery_app
 
 if __name__ == '__main__':
     # Actually run the application
-    flask_app.run(debug=True, host='0.0.0.0', port=REST_PORT)
+    flask_app.run(debug=True, host='0.0.0.0', port=80)
